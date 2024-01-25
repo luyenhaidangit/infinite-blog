@@ -3,7 +3,37 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33530.505
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InfiniteBlog.Api", "src\InfiniteBlog.Api\InfiniteBlog.Api.csproj", "{38494CA9-4FA4-476D-BA02-B4C9122A34D9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InfiniteBlog.Data", "src\InfiniteBlog.Data\InfiniteBlog.Data.csproj", "{93947BF9-0D48-4DEB-8C43-59B10084140F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InfiniteBlog.Core", "src\InfiniteBlog.Core\InfiniteBlog.Core.csproj", "{3DBB6B87-D49C-4589-BC6A-5F6B6D45BE0A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InfiniteBlog.WebApp", "src\InfiniteBlog.WebApp\InfiniteBlog.WebApp.csproj", "{C2561689-731A-4713-BC8C-2CD37FE9ECFE}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{38494CA9-4FA4-476D-BA02-B4C9122A34D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38494CA9-4FA4-476D-BA02-B4C9122A34D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38494CA9-4FA4-476D-BA02-B4C9122A34D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38494CA9-4FA4-476D-BA02-B4C9122A34D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{93947BF9-0D48-4DEB-8C43-59B10084140F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93947BF9-0D48-4DEB-8C43-59B10084140F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93947BF9-0D48-4DEB-8C43-59B10084140F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93947BF9-0D48-4DEB-8C43-59B10084140F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3DBB6B87-D49C-4589-BC6A-5F6B6D45BE0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DBB6B87-D49C-4589-BC6A-5F6B6D45BE0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DBB6B87-D49C-4589-BC6A-5F6B6D45BE0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DBB6B87-D49C-4589-BC6A-5F6B6D45BE0A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C2561689-731A-4713-BC8C-2CD37FE9ECFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2561689-731A-4713-BC8C-2CD37FE9ECFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2561689-731A-4713-BC8C-2CD37FE9ECFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2561689-731A-4713-BC8C-2CD37FE9ECFE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
