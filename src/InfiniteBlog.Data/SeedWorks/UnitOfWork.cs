@@ -1,7 +1,6 @@
 ﻿using InfiniteBlog.Core.SeedWorks;
-using InfiniteBlog.Data;
 
-namespace TeduBlog.Data.SeedWorks
+namespace InfiniteBlog.Data.SeedWorks
 {
     public class UnitOfWork : IUnitOfWork
     {
