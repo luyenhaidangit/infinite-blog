@@ -18,7 +18,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\InfiniteBlog.Api\InfiniteBlog.Api.csproj" />
     <ProjectReference Include="..\InfiniteBlog.Core\InfiniteBlog.Core.csproj" />
   </ItemGroup>
 

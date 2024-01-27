@@ -11,4 +11,9 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.1" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
   </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\InfiniteBlog.Core\InfiniteBlog.Core.csproj" />
+    <ProjectReference Include="..\InfiniteBlog.Data\InfiniteBlog.Data.csproj" />
+  </ItemGroup>
 </Project>
