@@ -2,11 +2,13 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using InfiniteBlog.Data;
 using InfiniteBlog.Core.Domain.Identity;
+using InfiniteBlog.Core.SeedWorks;
+using InfiniteBlog.Data.SeedWorks;
+using TeduBlog.Data.SeedWorks;
 
 var builder = WebApplication.CreateBuilder(args);
 var configuration = builder.Configuration;
 var connectionString = configuration.GetConnectionString("DefaultConnection");
-// Add services to the container.
 
 // Config DB Context and ASP.NET Core Identity
 builder.Services.AddDbContext<InfiniteBlogContext>(options =>
@@ -33,6 +35,10 @@ builder.Services.Configure<IdentityOptions>(options =>
     "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-._@+";
     options.User.RequireUniqueEmail = false;
 });
+
+// Add services to the container.
+builder.Services.AddScoped(typeof(IRepository<,>), typeof(RepositoryBase<,>));
+builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 
 // Default config for ASP.NET Core
 builder.Services.AddControllers();
