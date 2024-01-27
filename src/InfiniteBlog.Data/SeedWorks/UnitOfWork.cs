@@ -1,4 +1,8 @@
-﻿using InfiniteBlog.Core.SeedWorks;
+﻿using AutoMapper;
+using InfiniteBlog.Core.Domain.Content;
+using InfiniteBlog.Core.Repositories;
+using InfiniteBlog.Core.SeedWorks;
+using InfiniteBlog.Data.Repositories;
 
 namespace InfiniteBlog.Data.SeedWorks
 {
@@ -6,9 +10,12 @@ namespace InfiniteBlog.Data.SeedWorks
     {
         private readonly InfiniteBlogContext _context;
 
-        public UnitOfWork(InfiniteBlogContext context)
+        public IPostRepository Posts { get; private set; }
+
+        public UnitOfWork(InfiniteBlogContext context, IMapper mapper)
         {
             _context = context;
+            Posts = new PostRepository(context, mapper);
         }
         public async Task<int> CompleteAsync()
         {
