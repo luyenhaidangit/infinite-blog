@@ -5,6 +5,8 @@ using InfiniteBlog.Data.Repositories;
 using InfiniteBlog.Data.SeedWorks;
 using InfiniteBlog.Core.Domain.Identity;
 using InfiniteBlog.Core.SeedWorks;
+using InfiniteBlog.Core.Models.Content;
+using InfiniteBlog.Api;
 
 var builder = WebApplication.CreateBuilder(args);
 var configuration = builder.Configuration;
@@ -55,6 +57,8 @@ foreach (var service in services)
     }
 }
 
+builder.Services.AddAutoMapper(typeof(PostInListDto));
+
 // Default config for ASP.NET Core
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -75,5 +79,8 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
+
+//Seeding data
+app.MigrateDatabase();
 
 app.Run();
