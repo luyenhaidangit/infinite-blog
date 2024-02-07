@@ -9,6 +9,8 @@ using InfiniteBlog.Core.Models.Content;
 using InfiniteBlog.Api;
 using Swashbuckle.AspNetCore.SwaggerGen;
 using System.Reflection;
+using InfiniteBlog.Core.ConfigOptions;
+using InfiniteBlog.Api.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 var configuration = builder.Configuration;
@@ -59,7 +61,13 @@ foreach (var service in services)
     }
 }
 
+//Auto mapper
 builder.Services.AddAutoMapper(typeof(PostInListDto));
+builder.Services.Configure<JwtTokenSettings>(configuration.GetSection("JwtTokenSettings"));
+builder.Services.AddScoped<SignInManager<AppUser>, SignInManager<AppUser>>();
+builder.Services.AddScoped<UserManager<AppUser>, UserManager<AppUser>>();
+builder.Services.AddScoped<ITokenService, TokenService>();
+builder.Services.AddScoped<RoleManager<AppRole>, RoleManager<AppRole>>();
 
 // Default config for ASP.NET Core
 builder.Services.AddControllers();
