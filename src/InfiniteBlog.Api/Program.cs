@@ -11,6 +11,7 @@ using Swashbuckle.AspNetCore.SwaggerGen;
 using System.Reflection;
 using InfiniteBlog.Core.ConfigOptions;
 using InfiniteBlog.Api.Services;
+using InfiniteBlog.Api.Filters;
 
 var builder = WebApplication.CreateBuilder(args);
 var configuration = builder.Configuration;

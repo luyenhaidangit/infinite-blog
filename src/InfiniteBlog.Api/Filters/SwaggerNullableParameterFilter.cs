@@ -2,7 +2,7 @@
 using Microsoft.OpenApi.Models;
 using Swashbuckle.AspNetCore.SwaggerGen;
 
-namespace InfiniteBlog.Api
+namespace InfiniteBlog.Api.Filters
 {
     public class SwaggerNullableParameterFilter : IParameterFilter
     {
