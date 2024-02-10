@@ -44,6 +44,7 @@ import {
 import { IconModule, IconSetService } from '@coreui/icons-angular';
 import { MessageService } from 'primeng/api';
 import { AlertService } from './shared/services/alert.service';
+import { TokenStorageService } from './shared/services/token-storage.service';
 import { HttpClientModule } from '@angular/common/http';
 
 const APP_CONTAINERS = [
@@ -94,7 +95,8 @@ const APP_CONTAINERS = [
     Title,
     MessageService,
     AlertService,
-    AdminApiAuthApiClient
+    AdminApiAuthApiClient,
+    TokenStorageService
   ],
   bootstrap: [AppComponent]
 })
